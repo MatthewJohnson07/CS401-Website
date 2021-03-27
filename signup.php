@@ -23,7 +23,7 @@
 				</div>
 
 				<section class = "signin">
-					<form action = "includes/login_inc.php" method = "post" id = "login" class="input-group" >
+					<form action = "login_inc.php" method = "post" id = "login" class="input-group" >
 						<input type="email" name = "email" class = "input-field" placeholder = "Email" required />
 						<input type="password" name = "password" class = "input-field" placeholder = "Enter Password" required />
 						<button type="submit" name = "submit" class = "submit-btn">Log In</button>
@@ -31,7 +31,7 @@
 				</section>
 
 				<section class = "signup">
-					<form action = "includes/signup_inc.php" method = "post" id = "register" class="input-group" >
+					<form action = "signup_inc.php" method = "post" id = "register" class="input-group" >
 						<input type="text" name = "username" class = "input-field" placeholder = "Username" required />
 						<input type="email" name = "email" class = "input-field" placeholder = "Email" required />
 						<input type="password" name = "password" class = "input-field" placeholder = "Enter New Password" required />
