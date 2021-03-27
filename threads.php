@@ -5,17 +5,15 @@
 		<link rel="shortcut icon" type="image/jpg" href="img/logo.jpg" />
 	</head>
 	<body>
-		<header>
+		<div class= "header">
 			<?php include "navigation.php"; ?>
-		</header>
-		<aside>
-			<?php include "sidebar.php"; ?>
-		</aside>
+		</div>
 
-		<div id="container">
-			<div id="main">
+		<div class="content">
+			<aside>
+				<?php include "sidebar.php"; ?>
+			</aside>
 
-			</div>
 		</div>
 
 		<footer>

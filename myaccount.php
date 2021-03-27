@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <html>
 	<head>
 		<title>My Account</title>
@@ -5,22 +9,20 @@
 		<link rel="shortcut icon" type="image/jpg" href="img/logo.jpg" />
 	</head>
 	<body>
-		<header>
+		<div class= "header">
 			<?php include "navigation.php"; ?>
-		</header>
-		<aside>
-			<?php include "sidebar.php"; ?>
-		</aside>
-
-		<div id="wrapper">
-			<div id="main">
-
-			</div>
 		</div>
 
-		<footer>
-			<?php include "footer.php"; ?>
-		</footer>
+		<div class="content">
+			<aside>
+				<?php include "sidebar.php"; ?>
+			</aside>
+
+		</div>
+
+		
+		<?php include "footer.php"; ?>
+		
 
 	</body>
 </html>
