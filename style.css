@@ -1,0 +1,272 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #222;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+div {
+    display: block;
+    resize: both;
+}
+
+.content {
+    min-height: 1200px;
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 100px;
+}
+
+/* Content */
+h1 {
+    color: white;
+    font-size: 14px;
+}
+
+
+.logo {
+    float: left;
+    height: 90px;
+    width: 90px;
+    padding: 3px 0;
+    margin-left: 35px;
+}
+
+/* Header */
+.head-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.header {
+    background: #55d6aa;
+    height: 100px;
+    overflow: hidden;
+}
+
+.header-links {
+    float: right;
+    font-weight: 500;
+    margin-left: 70px;
+    margin-top: 17px;
+    padding-top: 23px;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+header::after  {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-size-adjust: auto;
+    margin-right: 120px;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a:before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #444;
+    position: absolute;
+    top: -4px;
+    transition: all ease 1000ms;
+    font-weight: bold;
+}
+
+nav a:hover:before {
+    width: 50%;
+}
+
+
+/* Sidebar */
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+
+
+.sidebar {
+    position: absolute;
+    height: 450px;
+    float: left;
+    left: 10px;
+    width: 200px;
+    background: #4b4276;
+    margin-top: 20px;
+}
+
+#sidebar-nav {
+    font-weight: bold;
+}
+
+.wrapper .sidebar h2 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li {
+    padding: 10px;
+    text-size-adjust: auto;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.wrapper .sidebar ul li a{
+    color: #bdb8d7;
+    display: block;
+    font-size: 100%;
+}
+
+.wrapper .sidebar ul il a .fas{
+    width: 5%;
+}
+
+.wrapper .sidebar ul li:hover {
+    background: #594f8d;
+}
+
+.wrapper .sidebar ul li:hover a {
+    color: #fff;
+}
+
+
+/* Main Content */
+.twitter {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 20px;
+    border: 2px solid #55d6aa;
+    width: 275px;
+    margin-right: 5px;
+    overflow: auto;
+    float: right;
+}
+
+.post-space {
+    margin-left: 250px;
+}
+
+.main-post {
+    float: left;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 502px;
+    height: -50px;
+}
+
+.post-heading {
+    position: absolute;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+    top: 80%;
+    left: 5%;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.post-heading a {
+    text-decoration: none;
+    color: white;
+}
+
+.post-author {
+    position: absolute;
+    font-family: Verdana, sans-serif;
+    top: 90%;
+    left: 5%;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+
+
+.main-post img {
+    opacity: 0.8;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+
+/* Login Page */
+.login-box {
+    margin-left: 300px;
+    color: white;
+
+}
+
+/* Footer */
+.footer {
+    background: #303036;
+    color: #d3d3d3;
+    bottom: 0;
+    height: 100px;
+    position: absolute;
+    margin: 0 auto;
+    clear: both;
+}
+
+.footer .footer-content {
+    height: 100px;
+
+}
+
+.footer .footer-bottom {
+    background: #343a40;
+    color: #686868;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+}
+
+.footer ul li {
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    list-style: none;
+    box-sizing: border-box;
+}
+
