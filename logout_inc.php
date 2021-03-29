@@ -4,7 +4,7 @@
     session_unset();
     session_destroy();
 
-    header("location: ../signup.php?error=emptyinput");
+    header("location: signup.php?logout=success");
     exit();
 
 

@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <html>
 	<head>
 		<title>Collaborate The Game</title>
@@ -13,74 +17,87 @@
 	<div class="content">
 		<?php include "sidebar.php"; ?>
 
-		<div class="signup-register">
-			<div class= "form-box">
+		<?php include "twitter_timeline.php"; ?>
 
-				<div class = "button-box">
-					<div id= "btn"></div>
-					<button type="button" class="toggle-btn" onclick="login()">Log In</button>
-					<button type="button" class="toggle-btn" onclick="register()">Register</button>
-				</div>
+		<div class = "section-divide">
+			<div class="signup-register">
+				<div class= "form-box">
 
-				<section class = "signin">
-					<form action = "includes/login_inc.php" method = "post" id = "login" class="input-group" >
-						<input type="email" name = "email" class = "input-field" placeholder = "Email" required />
-						<input type="password" name = "password" class = "input-field" placeholder = "Enter Password" required />
-						<button type="submit" name = "submit" class = "submit-btn">Log In</button>
-					</form>
-				</section>
+					<div class = "button-box">
+						<div id= "btn"></div>
+						<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+						<button type="button" class="toggle-btn" onclick="register()">Register</button>
+					</div>
 
-				<section class = "signup">
-					<form action = "includes/signup_inc.php" method = "post" id = "register" class="input-group" >
-						<input type="text" name = "username" class = "input-field" placeholder = "Username" required />
-						<input type="email" name = "email" class = "input-field" placeholder = "Email" required />
-						<input type="password" name = "password" class = "input-field" placeholder = "Enter New Password" required />
-						<button type="submit" name = "submit" class = "submit-btn">Register</button>
-					</form>
+					<section class = "signin">
+						<form action = "login_inc.php" method = "post" id = "login" class="input-group" >
+							<input type="text" name = "email" class = "input-field" placeholder = "Username or Email" required />
+							<input type="password" name = "password" class = "input-field" placeholder = "Enter Password" required />
+							<button type="submit" name = "submit" class = "submit-btn">Log In</button>
+						</form>
 
-					<?php
-						if(isset($_GET['error'])){
-							if($_GET['error'] == "emptyinput"){
+						<?php
+						if(isset($_GET['loginerror'])){
+							if($_GET['loginerror'] == "emptyinput"){
 								echo "<p>Fill in all fields</p>";
-							} else if($_GET['error'] == "invalidusername"){
-								echo "<p>Username is invalid</p>";
-							} else if($_GET['error'] == "invalidemail"){
-								echo "<p>Choose a proper email</p>";
-							} else if($_GET['error'] == "stmtfailed"){
-								echo "<p>Something went wrong. Please try again</p>";
-							} else if($_GET['error'] == "usernametaken"){
-								echo "<p>Username has already been taken</p>";
-							} else if($_GET['error'] == "none"){
-								echo "<p>You have signed up!</p>";
+							} else if($_GET['loginerror'] == "wrongpassword"){
+								echo "<p>One of the input fields is incorrect</p>";
+							} else if($_GET['success'] == "login"){
+								echo "<p>You have successfully logged in!</p>";
 							}
 						}
-					?>
-				</section>
+						?>
+					</section>
 
+					<section class = "signup">
+						<form action = "signup_inc.php" method = "post" id = "register" class="input-group" >
+							<input type="text" name = "username" class = "input-field" placeholder = "Username" required />
+							<input type="email" name = "email" class = "input-field" placeholder = "Email" required />
+							<input type="password" name = "password" class = "input-field" placeholder = "Enter New Password" required />
+							<button type="submit" name = "submit" class = "submit-btn">Register</button>
+						</form>
+
+						<?php
+							if(isset($_GET['error'])){
+								if($_GET['error'] == "emptyinput"){
+									echo "<p>Fill in all fields</p>";
+								} else if($_GET['error'] == "invalidusername"){
+									echo "<p>Username is invalid</p>";
+								} else if($_GET['error'] == "invalidemail"){
+									echo "<p>Choose a proper email</p>";
+								} else if($_GET['error'] == "stmtfailed"){
+									echo "<p>Something went wrong. Please try again</p>";
+								} else if($_GET['error'] == "usernametaken"){
+									echo "<p>Username has already been taken</p>";
+								} else if($_GET['error'] == "none"){
+									echo "<p>You have signed up!</p>";
+								}
+							}
+						?>
+					</section>
+
+				</div>
+
+				<script>
+					var x = document.getElementById("login");
+					var y = document.getElementById("register");
+					var z = document.getElementById("btn");
+
+					function register() {
+						x.style.left = "-400px";
+						y.style.left = "50px";
+						z.style.left = "110px";
+					}
+
+					function login() {
+						x.style.left = "50px";
+						y.style.left = "450px";
+						z.style.left = "0px";
+					}
+
+				</script>
 			</div>
-
-			<script>
-				var x = document.getElementById("login");
-				var y = document.getElementById("register");
-				var z = document.getElementById("btn");
-
-				function register() {
-					x.style.left = "-400px";
-					y.style.left = "50px";
-					z.style.left = "110px";
-				}
-
-				function login() {
-					x.style.left = "50px";
-					y.style.left = "450px";
-					z.style.left = "0px";
-                }
-
-			</script>
 		</div>
-
-
-		<?php include "twitter_timeline.php"; ?>
 	</div>
 		
 	<?php include "footer.php"; ?>
