@@ -12,7 +12,7 @@
 					if(isset($_SESSION['username'])){
 						echo "<li><a href='myaccount.php'>" .$_SESSION['username'] . "</a></li>";
 					} else {
-						echo "<li><a href='signup.php'>Sign up</a></li>";
+						echo "<li><a href='signup.php'>Log In/Register</a></li>";
 					}
 					
 					

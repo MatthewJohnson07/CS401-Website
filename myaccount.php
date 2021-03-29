@@ -18,6 +18,26 @@
 				<?php include "sidebar.php"; ?>
 			</aside>
 
+			<?php include "twitter_timeline.php"; ?>
+
+			<div class = "section-divide">
+				<section class="permissions" >
+				<?php 
+					if(isset($_SESSION['username'])){
+						echo "<p>Welcome back " . $_SESSION['username'] . "! </p>";
+						if($_SESSION['user_privilege'] == 1){ // Standard user
+							echo "<p>Account Status: Standard</p>";
+						} else if($_SESSION['user_privilege'] == 2){ // Admin user
+							echo "<p>Account Status: Admin</p>";
+					
+						} else if($_SESSION['user_privilege'] == 3){ // Manager
+							echo "<p>Account Status: Manager</p>";
+						}
+					}
+				?>
+				</section>
+			
+			</div>
 		</div>
 
 		

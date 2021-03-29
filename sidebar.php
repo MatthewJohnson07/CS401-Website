@@ -17,10 +17,10 @@
 					<?php 
 					if(isset($_SESSION['username'])){
 
-						echo "<li><a href='includes/logout_inc.php'> Logged Out </a></li>";
+						echo "<li><a href='logout_inc.php'> Log Out </a></li>";
 						
 					} else {
-						echo "<li><a href='signup.php'>Sign up</a></li>";
+						echo "<li><a href='signup.php'>Log in</a></li>";
 					}
 					?>
 

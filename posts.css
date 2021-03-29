@@ -1,0 +1,45 @@
+﻿.posts-table {
+    margin-top: 20px;
+    margin-left: 40px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.posts-table thead tr {
+    background-color: #009079;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.posts-table th, td {
+    padding: 12px 15px;
+}
+
+userTag {
+    width: 250px;
+}
+
+th, td {
+    width: 380px;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+.posts-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.posts-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.posts-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
